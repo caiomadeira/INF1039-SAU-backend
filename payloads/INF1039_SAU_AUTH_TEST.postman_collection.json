@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "bedfdd27-2d3f-479d-8abb-cc07925b92aa",
+		"name": "INF1039_SAU_AUTH_TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15806487",
+		"_collection_link": "https://tetsinch.postman.co/workspace/Team-Workspace~ddd9ad9a-7bbb-43e7-824d-29ce5824bf76/collection/15806487-bedfdd27-2d3f-479d-8abb-cc07925b92aa?action=share&source=collection_link&creator=15806487"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"item": [
+				{
+					"name": "error",
+					"item": [
+						{
+							"name": "Register-username_with_letters",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"2311ce040\",\r\n    \"first_name\": \"Douglas\",\r\n    \"last_name\": \"Vieira\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Register-Default",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"2311040\",\r\n    \"first_name\": \"Douglas\",\r\n    \"last_name\": \"Vieira\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
