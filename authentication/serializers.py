@@ -11,12 +11,13 @@ class UserSerializer(serializers.ModelSerializer):
     last_name=serializers.CharField(max_length=255, min_length=4)
     email=serializers.CharField(max_length=255, min_length=4)
     password=serializers.CharField(max_length=40, min_length=8, write_only=True)
+    is_student=serializers.BooleanField(default=True)
     
     class Meta:
         model=User
         # fields eh a informacao a ser vista no Response
         # fields=['register', 'first_name', 'last_name', 'email']
-        fields=['username', 'first_name', 'last_name', 'email', 'password']
+        fields=['username', 'first_name', 'last_name', 'email', 'password', 'is_student']
     
     '''
     O rest framework possui tres maneiras de realizar a validacao de dados com serializadores.

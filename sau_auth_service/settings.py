@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     # apis
-    'authentication'
-    
+    'authentication',
+    'sau_student'
 ]
 
 # REST FRAMEWORK CONFIGURATION
