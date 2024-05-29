@@ -29,7 +29,7 @@ class LoginView(GenericAPIView):
             auth_token = jwt.encode({'username': user.username}, settings.JWT_SECRET_KEY)
             
             serializer = UserSerializer(user)
-            data = {'user': serializer.data, 'token': auth_token}
+            data = {'user': serializer.data, 'token': auth_token, "status_code": status.HTTP_200_OK, "status_msg": "usuario logado."}
             
             return Response(data, status=status.HTTP_200_OK)
         
