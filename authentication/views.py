@@ -7,6 +7,7 @@ from django.conf import settings
 from django.contrib import auth
 import jwt
 
+
 # Herda de GenericApiView para poder lidar com qualquer tipo de request
 class RegisterView(GenericAPIView):
     serializer_class = UserSerializer
@@ -34,3 +35,4 @@ class LoginView(GenericAPIView):
             return Response(data, status=status.HTTP_200_OK)
         
         return Response({'detail': 'Invalid credentials.'}, status=status.HTTP_401_UNAUTHORIZED)
+    

@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -30,7 +29,7 @@ SECRET_KEY = 'django-insecure-187xtah7(8a_$4hlb^1bv(mwx3u0ontklc4)nui9mazj^i!btv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
 
 
 # Application definition
@@ -143,5 +142,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 JWT_SECRET_KEY = 'JWT_SECRET_KEYJWT_SECRET_KEYJWT_SECRET_KEYJWT_SECRET_KEYJWT_SECRET_KEYJWT_SECRET_KEYJWT_SECRET_KEYJWT_SECRET_KEYJWT_SECRET_KEYJWT_SECRET_KEY'
 
 JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
-
-django_heroku.settings(locals())
