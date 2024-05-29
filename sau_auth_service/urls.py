@@ -7,5 +7,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/auth/', include('authentication.urls')),
     path('api/v1/student/', include('student.urls')),
-    path('', status_api, name='SAU Backend')
+    path('', status_api, name='SAU Backend'),
+    path('login', login_test, name='Login test')
 ]
