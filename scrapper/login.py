@@ -2,13 +2,13 @@ from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 from datetime import date
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import time
 
-load_dotenv()
+#load_dotenv()
 
 path = 'https://sau.puc-rio.br/WebLoginPucOnline/Default.aspx?sessao=VmluY3Vsbz1BJlNpc3RMb2dpbj1QVUNPTkxJTkVfQUxVTk8mQXBwTG9naW49TE9HSU4mRnVuY0xvZ2luPUxPR0lOJlNpc3RNZW51PVBVQ09OTElORV9BTFVOTyZBcHBNZW51PU1FTlUmRnVuY01lbnU9TUVOVQ__'
-print(os.getenv('USER'), os.getenv('PASSWORD'))
+#print(os.getenv('USER'), os.getenv('PASSWORD'))
 
 html_ctx: dict = {
     'input_user': 'input#txtLogin',
