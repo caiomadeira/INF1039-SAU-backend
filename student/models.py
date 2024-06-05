@@ -1,4 +1,13 @@
 from django.db import models
+from django.core.validators import RegexValidator, MinLengthValidator
+
+class Student(models.Model):
+    username = models.CharField(max_length=10)
+    name = models.CharField(max_length=100)
+    password=models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.title
 
 class AbsencesModel(models.Model):
     code = models.CharField(max_length=40)
