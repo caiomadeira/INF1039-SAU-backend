@@ -5,6 +5,9 @@ python3.9 -m ensurepip
 python3.9 -m pip install -r requirements.txt 
 python3.9 manage.py collectstatic
 
+echo "GLIBC VERSION"
+$ ldd --version
+
 echo "INSTALL PLAYWRIGHT"
 python3.9 -m playwright install
 echo "playwright installed sucess"
