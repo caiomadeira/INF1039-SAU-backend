@@ -1,7 +1,7 @@
 beautifulsoup4
 Django
 djangorestframework
-playwright
+playwright==1.15
 psycopg==3.0
 psycopg2-binary==2.9.9
 PyJWT
