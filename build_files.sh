@@ -7,6 +7,11 @@ python3.9 manage.py collectstatic
 
 echo ">>>>>>>GLIBC VERSION"
 ldd --version
+echo "CHECK UBUNTU LINUX VERSION"
+cat /etc/os-release
+lsb_release -a
+hostnamectl
+
 echo "================================"
 
 echo ">>>>>>INSTALL PLAYWRIGHT"
