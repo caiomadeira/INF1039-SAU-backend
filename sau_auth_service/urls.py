@@ -16,7 +16,6 @@ urlpatterns = [
     path('sucess', login_sucess, name='Login Sucess')
 ]
 
-urlpatterns += static(settings.STATIC_URL, 
-document_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, 
-document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
