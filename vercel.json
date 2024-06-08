@@ -1,5 +1,4 @@
 {
-  "devCommand": "playwright install",
     "builds": [{
         "src": "sau_auth_service/wsgi.py",
         "use": "@vercel/python",
