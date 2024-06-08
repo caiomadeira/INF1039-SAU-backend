@@ -9,14 +9,11 @@ echo ">>>>>>>GLIBC VERSION"
 ldd --version
 echo "CHECK UBUNTU LINUX VERSION"
 cat /etc/os-release
-lsb_release -a
-hostnamectl
 
 echo "================================"
 
 echo ">>>>>>INSTALL PLAYWRIGHT"
-python3.9 -m playwright install
-python3.9 -m playwright install-deps                                
+python3.9 -m playwright install                       
 
 echo "==================== playwright install END ================================"
 
