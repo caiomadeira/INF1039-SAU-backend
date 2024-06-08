@@ -16,11 +16,7 @@ echo "================================"
 
 echo ">>>>>>INSTALL PLAYWRIGHT"
 python3.9 -m playwright install
-python3.9 -m playwright install-deps
-apt-get install libnss3   
-apt-get install libnspr4                                     
-apt-get install libgbm1                                      
-
+python3.9 -m playwright install-deps                                
 
 echo "==================== playwright install END ================================"
 
