@@ -1,6 +1,7 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, BrowserType
 from bs4 import BeautifulSoup
 from datetime import date
+import subprocess
 import os
 #from dotenv import load_dotenv
 import time
@@ -40,6 +41,11 @@ def make_login(hide_browser: bool, user: str, password: str):
     except Exception as e:
         print("Error: ", e)
         return e
+    except BrowserType.launch:
+        print("Instaaling playwright")
+        os.system("playwright install")
+        time.sleep(2)
+        return make_login(hide_browser, user, password)
 
 def save_log(text: str):
     with open(f'log_{date.today()}.txt', 'w') as f:
