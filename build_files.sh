@@ -9,6 +9,7 @@ echo ">>>>>>>GLIBC VERSION"
 ldd --version
 echo "CHECK UBUNTU LINUX VERSION"
 cat /etc/os-release
+lsb_release-a
 
 echo "================================"
 
