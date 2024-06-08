@@ -80,4 +80,4 @@ def getClasses(contentHorarios):
     return classesDict
  
 
-#make_login(hide_browser=False, user=os.getenv('USER'), password=os.getenv('PASSWORD'))
+#make_login(hide_browser=False, user="1921050", password="thelonel")
