@@ -33,7 +33,7 @@ def make_login(hide_browser: bool, user: str, password: str):
                 print("Erro no login.\n")
             else:
                 html = pg.inner_html(html_ctx['username'])
-                print(html)
+                print(str(html))
                 #save_log(html)
                 return html
 

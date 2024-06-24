@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS += '192.168.56.1'
+ALLOWED_HOSTS += '192.168.0.10'
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
