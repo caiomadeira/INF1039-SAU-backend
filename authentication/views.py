@@ -49,7 +49,9 @@ def login_sau(request):
     if form.is_valid():
         user = form.cleaned_data['username']
         password = form.cleaned_data['password']
-        username_sau = str(make_login(hide_browser=False, user=user, password=password))
+        dadosLogin = (make_login(hide_browser=True, user=user, password=password))
+        username_sau = dadosLogin[0] 
+        aulas = dadosLogin[1]
         return render(request, 'login_sucess.html', {'username': username_sau})
     else:
         user = None

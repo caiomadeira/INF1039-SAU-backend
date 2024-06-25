@@ -5,6 +5,7 @@ import subprocess
 import os
 #from dotenv import load_dotenv
 import time
+import json
 
 #load_dotenv()
 
@@ -28,14 +29,14 @@ def make_login(hide_browser: bool, user: str, password: str):
             pg.fill(html_ctx['input_password'], password)
             pg.click(html_ctx['submit_btn'])
             error_login = pg.is_visible('div.pnlAlertModalTipoErro')
-            print(error_login)
+            #print(error_login)
             if error_login:
                 print("Erro no login.\n")
             else:
                 html = pg.inner_html(html_ctx['username'])
-                print(str(html))
                 #save_log(html)
-                return html
+                jsonAulas = sau_goto(pg, 'Horários e salas de aula')
+                return [str(html), jsonAulas]
 
             #sau_goto(pg, 'Horários e salas de aula')
     except Exception as e:
@@ -58,8 +59,9 @@ def sau_goto(pg, menu_item: str):
         pg.get_by_text("Horários e salas de aula").click()
         content = pg.inner_html('#pnlListDisc')
         elemento = getClasses(content)
-        for k,v in elemento.items():
-            print(f"{k} = {v} \n\n\n")
+       # for k,v in elemento.items():
+            #print(f"{k} = {v} \n\n\n")
+        return json.dumps(elemento)
 
 
 def getClasses(contentHorarios):
